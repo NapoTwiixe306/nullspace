@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nullspace/vscode-nullspace"
+    "url": "https://github.com/NapoTwiixe306/nullspace"
   },
   "bugs": {
-    "url": "https://github.com/nullspace/vscode-nullspace/issues"
+    "url": "https://github.com/NapoTwiixe306/nullspace/issues"
   },
-  "homepage": "https://github.com/nullspace/vscode-nullspace#readme",
+  "homepage": "https://github.com/NapoTwiixe306/nullspace/blob/main/README.md",
   "main": "./out/extension.js",
   "engines": {
     "vscode": "^1.118.0"
