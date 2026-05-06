@@ -1,0 +1,92 @@
+{
+  "name": "nullspace",
+  "displayName": "Nullspace",
+  "description": "A dark Cursor-inspired VS Code theme with cohesive UI and rich syntax highlighting.",
+  "publisher": "nullspace",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nullspace/vscode-nullspace"
+  },
+  "bugs": {
+    "url": "https://github.com/nullspace/vscode-nullspace/issues"
+  },
+  "homepage": "https://github.com/nullspace/vscode-nullspace#readme",
+  "main": "./out/extension.js",
+  "engines": {
+    "vscode": "^1.118.0"
+  },
+  "scripts": {
+    "build": "ts-node src/build.ts",
+    "compile": "tsc -p .",
+    "package": "npm run build && npm run compile && npx @vscode/vsce package"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "galleryBanner": {
+    "color": "#0a0f1a",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Nullspace",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Nullspace-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "nullspace-icons",
+        "label": "Nullspace Icons (Material)",
+        "path": "./icons/nullspace-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "nullspace.applyRecommendedSettings",
+        "title": "Nullspace: Apply Recommended Settings"
+      },
+      {
+        "command": "nullspace.toggleIconSaturation",
+        "title": "Nullspace: Toggle Icon Saturation"
+      }
+    ],
+    "configuration": {
+      "title": "Nullspace",
+      "properties": {
+        "nullspace.iconVariant": {
+          "type": "string",
+          "enum": [
+            "material",
+            "seti"
+          ],
+          "default": "material",
+          "markdownDescription": "Preferred Nullspace icon variant."
+        }
+      }
+    }
+  },
+  "activationEvents": [
+    "onCommand:nullspace.applyRecommendedSettings",
+    "onCommand:nullspace.toggleIconSaturation"
+  ],
+  "keywords": [
+    "theme",
+    "icon theme",
+    "dark theme",
+    "material style",
+    "cursor"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.118.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

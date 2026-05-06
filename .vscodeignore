@@ -1,0 +1,10 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+vsc-extension-quickstart.md
+material-icon-upstream/**
+material-icon-package/**
+material-icon-theme-*.tgz
+src/icons.ts
+icons/svg/**
+icons/svg-muted/**
